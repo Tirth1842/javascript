@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funadd()
+        {
+            
+            let a= document.getElementById("txtno1").value;
+            let b=document.getElementById("txtno2").value;
+            if(a>b)
+            {
+                document.getElementById("txtans").value="No.1 is max";
+            }
+            else if(b>a)
+            {
+                document.getElementById("txtans").value="No.2 is max";
+            }
+            else{
+                document.getElementById("txtans").value="equal";
+            }
+            
+        }
+    </script>
+    <form name="frm1">
+        No.1<input type="text" id="txtno1"><br><br>
+        No.2<input type="text" id="txtno2"><br><br>
+        <input type="button" value="Click me" id="btans" onclick="funadd();"><br><br>
+        max<input type="text" id="txtans">
+
+    </form>
+</body>
+</html>

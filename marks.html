@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funadd()
+        {
+            
+            let a= document.getElementById("txtno1").value;
+            let b=document.getElementById("txtno2").value;
+            let c=parseInt(document.getElementById("txtno3").value);
+            let total=document.getElementById("txttotal").value=parseInt(a)+parseInt(b)+c;
+            if(total>=0 && total<=50)
+            {
+                
+                document.getElementById("txtgrade").value="C";
+            }
+            else if(total>50 && total<=100)
+            {
+                
+                document.getElementById("txtgrade").value="B";
+            }
+            else if(total>=101){
+               
+                document.getElementById("txtgrade").value="A";
+            }
+            
+        }
+    </script>
+    <form name="frm1">
+        hindi<input type="text" id="txtno1"><br><br>
+        english<input type="text" id="txtno2"><br><br>
+        maths<input type="text" id="txtno3"><br><br>
+        <input type="button" value="Click me" id="btans" onclick="funadd();"><br><br>
+        total<input type="text" id="txttotal">
+        grade<input type="text" id="txtgrade">
+
+    </form>
+</body>
+</html>
