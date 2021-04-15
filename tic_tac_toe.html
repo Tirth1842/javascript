@@ -8,50 +8,230 @@
 </head>
 <body>
     <script>
-        function funadd()
+        let turn=0;
+
+
+        function enableall()
         {
-            
+            document.getElementById("btans1").disabled = false;
+            document.getElementById("btans2").disabled = false;
+            document.getElementById("btans3").disabled = false;
+            document.getElementById("btans4").disabled = false;
+            document.getElementById("btans5").disabled = false;
+            document.getElementById("btans6").disabled = false;
+            document.getElementById("btans7").disabled = false;
+            document.getElementById("btans8").disabled = false;
+            document.getElementById("btans9").disabled = false;
+
+            document.getElementById("btans1").value="     ";
+            document.getElementById("btans2").value="     ";
+            document.getElementById("btans3").value="     ";
+            document.getElementById("btans4").value="     ";
+            document.getElementById("btans5").value="     ";
+            document.getElementById("btans6").value="     ";
+            document.getElementById("btans7").value="     ";
+            document.getElementById("btans8").value="     ";
+            document.getElementById("btans9").value="     ";
+
+            turn=0;
+
         }
+
+        function disableall()
+        {
+            document.getElementById("btans1").disabled = true;
+            document.getElementById("btans2").disabled = true;
+            document.getElementById("btans3").disabled = true;
+            document.getElementById("btans4").disabled = true;
+            document.getElementById("btans5").disabled = true;
+            document.getElementById("btans6").disabled = true;
+            document.getElementById("btans7").disabled = true;
+            document.getElementById("btans8").disabled = true;
+            document.getElementById("btans9").disabled = true;
+        }
+
+        function funx1(x)
+        {
+            if(turn%2==0)
+            {
+                document.getElementById(x).value='X';
+            }
+            else{
+                document.getElementById(x).value='0';
+            }
+        turn++;
+
+        let c1=document.getElementById("btans1").value;
+        let c2=document.getElementById("btans2").value;
+        let c3=document.getElementById("btans3").value;
+        let c4=document.getElementById("btans4").value;
+        let c5=document.getElementById("btans5").value;
+        let c6=document.getElementById("btans6").value;
+        let c7=document.getElementById("btans7").value;
+        let c8=document.getElementById("btans8").value;
+        let c9=document.getElementById("btans9").value;
+
+
+        if(c1==c2 && c2==c3)
+        {
+            if(c1=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+                
+            }
+            else if(c1=='0'){
+                alert("winner is player 2");
+                disableall();
+
+            }
+        }
+        if(c4==c5 && c5==c6)
+        {
+            if(c4=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+                
+
+            }
+            else if(c4=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c7==c8 && c8==c9)
+        {
+            if(c7=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+                
+            }
+            else if(c7=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c1 == c4 && c4 == c7)
+        {
+            if(c1=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+            }
+            else if(c1=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c2 == c5 && c5 == c8)
+        {
+            if(c2=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+            }
+            else if(c2=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c3 == c6 && c6 == c9)
+        {
+            if(c3=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+            }
+            else if(c3=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c1 == c5 && c5 == c9)
+        {
+            if(c1=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+            }
+            else if(c1=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        if(c3 == c5 && c5 == c7)
+        {
+            if(c3=='X')
+            {
+                alert("winner is player 1");
+                disableall();
+            }
+            else if(c3=='0'){
+                alert("winner is player 2");
+                disableall();
+            }
+        }
+        
+        }
+        
+        
     </script>
+
+    <style>
+.a{
+font-size: xx-large;
+color:blue;
+}
+
+    </style>
     <form name="frm1">
         <table>
             <tr>
                 <td>
-                    <input type="button"value="          " id="btans1" onclick="funadd();"><br><br>
+                    <input type="button"value="     "   onclick="funx1('btans1');" id="btans1"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button"value="          " id="btans2" onclick="funadd();"><br><br>
+                    <input type="button"value="     "    onclick="funx1('btans2');" id="btans2"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button"value="          " id="btans3" onclick="funadd();"><br><br>
+                    <input type="button"value="     "    onclick="funx1('btans3');" id="btans3"  class="a"><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" value="          " id="btans4" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans4');" id="btans4"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button" value="          " id="btans5" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans5');" id="btans5"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button" value="          " id="btans6" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans6');" id="btans6" class="a"><br><br>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type="button" value="          " id="btans7" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans7');" id="btans7"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button" value="          " id="btans8" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans8');" id="btans8"  class="a"><br><br>
                 </td>
                 <td>
-                    <input type="button" value="          " id="btans9" onclick="funadd();"><br><br>
+                    <input type="button" value="     "    onclick="funx1('btans9');" id="btans9"  class="a"><br><br>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input type="button" value="restart" onclick="enableall();">
+
+                </td>
+                
+            </tr>
+            
         </table>
         
         
-       
        
 
     </form>
