@@ -7,6 +7,447 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        
+        
+        table, th {
+            border: 1px solid rgb(163, 148, 148);
+            padding: 0px;
+            font-size:x-large;
+            font-weight:bold;
+            font-family: arial;
+            text-align: center;
+            
+        }
+        
+        .a{
+            background-color:whitesmoke;
+            height: 50px;
+            width: 50px;
+        }
+        .b{
+            background-color: teal;
+            height: 50px;
+            width: 50px;
+        }
+        .c{
+            height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+        
+        
+    </style>
+    <script>
+        var p1 = 0;
+        var p2 = 0;
+        var count_p1=0;
+        var count_p2=0;
+        var prev_pos1=0;
+        var prev_pos2=0;
+
+        function dice1()
+        {
+            count_p1++;
+            var a;
+            a=Math.floor(Math.random() * (7 - 1)) + 1
+            document.getElementById("btans1").value=a;
+            p1=p1+a;
+            document.getElementById("bspanp1").innerHTML = p1;
+
+        }
+        function dice2()
+        {
+            count_p2++;
+            var a;
+            a=Math.floor(Math.random() * (7 - 1)) + 1
+            document.getElementById("btans2").value=a;
+            p2=p2+a;
+            document.getElementById("bspanp2").innerHTML = p2;
+
+        }
+
+        function changeColor1()
+        {
+            if(count_p1==1)
+            {
+                var pos1 = document.getElementById("b"+p1);
+                pos1.style.backgroundColor='red';
+                prev_pos1=p1;
+            }
+            else
+            {
+                var poss1 = document.getElementById("b"+prev_pos1);
+                poss1.style.backgroundColor='';
+
+                var pos1 = document.getElementById("b"+p1);
+                pos1.style.backgroundColor='red';
+                prev_pos1=p1;
+            }
+            
+            
+            
+           
+        }
+        function changecolor2()
+        {
+             if(count_p2==1)
+            {
+                var pos2 = document.getElementById("b"+p2);
+                pos2.style.backgroundColor='yellow';
+                prev_pos2=p2;
+            }
+            else
+            {
+                var poss2 = document.getElementById("b"+prev_pos2);
+                poss2.style.backgroundColor='';
+
+                var pos2 = document.getElementById("b"+p2)
+                pos2.style.backgroundColor='yellow';
+                prev_pos2=p2;
+            }
+            
+        }
+    </script>
     
+    <form name="frm1">
+        <table  cellspacing="0">
+                <tr>
+                    <td id="b100" id="b100" class="a">
+                        100
+                    </td>
+                    <td id="b99" class="b">
+                        99
+                    </td>
+                    <td id="b98" class="a">
+                        98
+                    </td>
+                    <td id="b97" class="b">
+                        97
+                    </td>
+                    <td id="b96" class="a">
+                        96
+                    </td>
+                    <td id="b95" class="b">
+                        95
+                    </td>
+                    <td id="b94" class="a">
+                        94
+                    </td>
+                    <td id="b93" class="b">
+                        93
+                    </td>
+                    <td id="b92" class="a">
+                        92
+                    </td>
+                    <td id="b91" class="b">
+                        91
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b81" class="b">
+                        81
+                    </td>
+                    <td id="b82" class="a">
+                        82
+                    </td>
+                    <td id="b83" class="b">
+                        83
+                    </td>
+                    <td id="b84" class="a">
+                        84
+                    </td>
+                    <td id="b85" class="b">
+                        85
+                    </td>
+                    <td id="b86" class="a">
+                        86
+                    </td>
+                    <td id="b87" class="b">
+                        87
+                    </td>
+                    <td id="b88" class="a">
+                        88
+                    </td>
+                    <td id="b89" class="b">
+                        89
+                    </td>
+                    <td id="b90" class="a">
+                        90
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b80" class="a">
+                        80
+                    </td>
+                    <td id="b79" class="b">
+                        79
+                    </td>
+                    <td id="b78" class="a">
+                        78
+                    </td>
+                    <td id="b77" class="b">
+                        77
+                    </td>
+                    <td id="b76" class="a">
+                        76
+                    </td>
+                    <td id="b75" class="b">
+                        75
+                    </td>
+                    <td id="b74" class="a">
+                        74
+                    </td>
+                    <td id="b73" class="b">
+                        73
+                    </td>
+                    <td id="b72" class="a">
+                        72
+                    </td>
+                    <td id="b71" class="b">
+                        71
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b61" class="b">
+                        61
+                    </td>
+                    <td id="b62" class="a">
+                        62
+                    </td>
+                    <td id="b63" class="b">
+                        63
+                    </td>
+                    <td id="b64" class="a">
+                        64
+                    </td>
+                    <td id="b65" class="b">
+                        65
+                    </td>
+                    <td id="b66" class="a">
+                        66
+                    </td>
+                    <td id="b67" class="b">
+                        67
+                    </td>
+                    <td id="b68" class="a">
+                        68
+                    </td>
+                    <td id="b69" class="b">
+                        69
+                    </td>
+                    <td id="b70" class="a">
+                        70
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b60" class="a">
+                        60
+                    </td>
+                    <td id="b59" class="b">
+                        59
+                    </td>
+                    <td id="b58" class="a">
+                        58
+                    </td>
+                    <td id="b57" class="b">
+                        57
+                    </td>
+                    <td id="b56" class="a">
+                        56
+                    </td>
+                    <td id="b55" class="b">
+                        55
+                    </td>
+                    <td id="b54" class="a">
+                        54
+                    </td>
+                    <td id="b53" class="b">
+                        53
+                    </td>
+                    <td id="b52" class="a">
+                        52
+                    </td>
+                    <td id="b51" class="b">
+                        51
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b41" class="b">
+                        41
+                    </td>
+                    <td id="b42" class="a">
+                        42
+                    </td>
+                    <td id="b43" class="b">
+                        43
+                    </td>
+                    <td id="b44" class="a">
+                        44
+                    </td>
+                    <td id="b45" class="b">
+                        45
+                    </td>
+                    <td id="b46" class="a">
+                        46
+                    </td>
+                    <td id="b47" class="b">
+                        47
+                    </td>
+                    <td id="b48" class="a">
+                        48
+                    </td>
+                    <td id="b49" class="b">
+                        49
+                    </td>
+                    <td id="b50" class="a">
+                        50
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b40" class="a">
+                        40
+                    </td>
+                    <td id="b39" class="b">
+                        39
+                    </td>
+                    <td id="b38" class="a">
+                        38
+                    </td>
+                    <td id="b37" class="b">
+                        37
+                    </td>
+                    <td id="b36" class="a">
+                        36
+                    </td>
+                    <td id="b35" class="b">
+                        35
+                    </td>
+                    <td id="b34" class="a">
+                        34
+                    </td>
+                    <td id="b33" class="b">
+                        33
+                    </td>
+                    <td id="b32" class="a">
+                        32
+                    </td>
+                    <td id="b31" class="b">
+                        31
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b21" class="b">
+                        21
+                    </td>
+                    <td id="b22" class="a">
+                        22
+                    </td>
+                    <td id="b23" class="b">
+                        23
+                    </td>
+                    <td id="b24" class="a">
+                        24
+                    </td>
+                    <td id="b25" class="b">
+                        25
+                    </td>
+                    <td id="b26" class="a">
+                        26
+                    </td>
+                    <td id="b27" class="b">
+                        27
+                    </td>
+                    <td id="b28" class="a">
+                        28
+                    </td>
+                    <td id="b29" class="b">
+                        29
+                    </td>
+                    <td id="b30" class="a">
+                        30
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b20" class="a">
+                        20
+                    </td>
+                    <td id="b19" class="b">
+                        19
+                    </td>
+                    <td id="b18" class="a">
+                        18
+                    </td>
+                    <td id="b17" class="b">
+                        17
+                    </td>
+                    <td id="b16" class="a">
+                        16
+                    </td>
+                    <td id="b15" class="b">
+                        15
+                    </td>
+                    <td id="b14" class="a">
+                        14
+                    </td>
+                    <td id="b13" class="b">
+                        13
+                    </td>
+                    <td id="b12" class="a">
+                        12
+                    </td>
+                    <td id="b11" class="b">
+                        11
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b1" class="b">
+                        1
+                    </td>
+                    <td id="b2" class="a">
+                        2
+                    </td>
+                    <td id="b3" class="b">
+                        3
+                    </td>
+                    <td id="b4" class="a">
+                        4
+                    </td>
+                    <td id="b5" class="b">
+                        5
+                    </td>
+                    <td id="b6" class="a">
+                        6
+                    </td>
+                    <td id="b7" class="b">
+                        7
+                    </td>
+                    <td id="b8"  class="a">
+                        8
+                    </td>
+                    <td id="b9"  class="b">
+                        9
+                    </td>
+                    <td id="b10" class="a">
+                        10
+                    </td>
+                </tr>
+               
+        </table>
+        <br>
+        <br>
+        <br>
+        <input type="button" value="P1" id="btans1" onclick="dice1(); changeColor1();"class="c">        <input type="button" value="P2" id="btans2" onclick="dice2(); changecolor2();"class="c">
+        <br>
+        <br>
+        <div>
+            P1 :<span id="bspanp1"></span> 
+            
+    
+          </div>
+          <div>
+            P2 :<span id="bspanp2"></span>  
+
+    </form>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const writecookie=()=>{
+        if(document.getElementById("cook").value==""){
+            alert("enter value");
+            return;
+        }
+        else{
+             cookievalue = document.getElementById("cook").value;
+            document.cookie ="name=" + cookievalue;
+            document.write("setting cookie :" +" name = "+cookievalue);
+        }
+             
+        
+    }
+    const hii=()=>{
+        alert(cookievalue);
+    }
+    
+</script>
+<body>
+    <form>
+        Enter name: <input type="text" id="cook"/>
+        <input type="button" value="set cookie" onclick="writecookie();hii();"/>
+    </form>
+</body>
+</html>

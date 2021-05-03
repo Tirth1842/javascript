@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+       const hadd=()=>{
+       
+        let w=window.innerWidth;
+        let h=window.innerHeight;
+        alert("Height = " + h);
+        alert("width = "+w);
+       document.getElementById("wspananswer").innerHtml=w;
+       document.getElementById("hspananswer").innerHtml=h;
+    }      
+</script>
+<body onload="hadd();">
+    <span id="wspananswer"></span>
+    <span id="hspananswer"></span>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>SNAKE LADDER</title>
+</head>
+
+<body>
+  <h1 id="title">SNAKES AND LADDER</h1>
+  <script>
+    let p1 = 0;
+    let p2 = 0;
+    var count_p1=0;
+    var count_p2=0;x  
+    var prev_pos1=0;
+    var prev_pos2=0;
+
+    function diceNumber1() {
+      count_p1++;
+     
+      var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("p1").value = randomNumber1;
+      p1 = p1 + randomNumber1;
+      document.getElementById("spanp1").innerHTML = p1;
+    }
+
+    function diceNumber2() {
+      count_p2++;
+      var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("p2").value = randomNumber2;
+      p2 = p2 + randomNumber2;
+      document.getElementById("spanp2").innerHTML = p2;
+     
+
+    }
+
+    function Reset() {
+      document.getElementById("p1").value = "P1";
+      document.getElementById("p2").value = "P2";
+    }
+    function changeColor1()
+    {
+      if(count_p1==1)
+      {
+        var pos1 = document.getElementById("b"+p1);
+        pos1.style.backgroundColor='red';
+        prev_pos1=p1;
+      }
+      else{
+        var  poss1 = document.getElementById("b"+prev_pos1);
+        poss1.style.backgroundColor='';
+
+        var pos1 = document.getElementById("b"+p1);
+        pos1.style.backgroundColor='red';
+        prev_pos1=p1;
+      }
+      
+      
+    }
+    function changecolor2()
+    {
+      
+      if(count_p2==1)
+      {
+        var pos2 = document.getElementById("b"+p2);
+        pos2.style.backgroundColor='yellow';
+        prev_pos2=p2;
+      }
+      else{
+        var  poss2 = document.getElementById("b"+prev_pos2);
+        poss2.style.backgroundColor='';
+
+        var pos2 = document.getElementById("b"+p2);
+        pos2.style.backgroundColor='yellow';
+        prev_pos2=p2;
+      }
+        
+      
+    }
+    
+
+    
+      
+      
+    
+  </script>
+  <style>
+    .b{
+        height: 60px;
+        width: 60px;
+        text-align: center;
+    }
+    #p1{
+        height: 60px;
+        width: 60px;
+        text-align: center;   
+    }
+    #p2{
+        height: 60px;
+        width: 60px;
+        text-align: center;   
+    }
+
+  </style>
+  <div class="container">
+    <form>
+        <table>
+          <tr>
+            <td>
+              <input type="button" id="b100" value="100" class="b">
+              <input type="button" id="b99" value="99" class="b">
+              <input type="button" id="b98" value="98" class="b">
+              <input type="button" id="b97" value="97" class="b">
+              <input type="button" id="b96" value="96" class="b">
+              <input type="button" id="b95" value="95" class="b">
+              <input type="button" id="b94" value="94" class="b">
+              <input type="button" id="b93" value="93" class="b">
+              <input type="button" id="b92" value="92" class="b">
+              <input type="button" id="b91" value="91" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b81" value="81" class="b">
+              <input type="button" id="b82" value="82" class="b">
+              <input type="button" id="b83" value="83" class="b">
+              <input type="button" id="b84" value="84" class="b">
+              <input type="button" id="b85" value="85" class="b">
+              <input type="button" id="b86" value="86" class="b">
+              <input type="button" id="b87" value="87" class="b">
+              <input type="button" id="b88" value="88" class="b">
+              <input type="button" id="b89" value="89" class="b">
+              <input type="button" id="b90" value="90" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b80" value="80" class="b">
+              <input type="button" id="b79" value="79" class="b">
+              <input type="button" id="b78" value="78" class="b">
+              <input type="button" id="b77" value="77" class="b">
+              <input type="button" id="b76" value="76" class="b">
+              <input type="button" id="b75" value="75" class="b">
+              <input type="button" id="b74" value="74" class="b">
+              <input type="button" id="b73" value="73" class="b">
+              <input type="button" id="b72" value="72" class="b">
+              <input type="button" id="b71" value="71" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b61" value="61" class="b">
+              <input type="button" id="b62" value="62" class="b">
+              <input type="button" id="b63" value="63" class="b">
+              <input type="button" id="b64" value="64" class="b">
+              <input type="button" id="b65" value="65" class="b">
+              <input type="button" id="b66" value="66" class="b">
+              <input type="button" id="b67" value="67" class="b">
+              <input type="button" id="b68" value="68" class="b">
+              <input type="button" id="b69" value="69" class="b">
+              <input type="button" id="b70" value="70" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b60" value="60" class="b">
+              <input type="button" id="b59" value="59" class="b">
+              <input type="button" id="b58" value="58" class="b">
+              <input type="button" id="b57" value="57" class="b">
+              <input type="button" id="b56" value="56" class="b">
+              <input type="button" id="b55" value="55" class="b">
+              <input type="button" id="b54" value="54" class="b">
+              <input type="button" id="b53" value="53" class="b">
+              <input type="button" id="b52" value="52" class="b">
+              <input type="button" id="b51" value="51" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b41" value="41" class="b">
+              <input type="button" id="b42" value="42" class="b">
+              <input type="button" id="b43" value="43" class="b">
+              <input type="button" id="b44" value="44" class="b">
+              <input type="button" id="b45" value="45" class="b">
+              <input type="button" id="b46" value="46" class="b">
+              <input type="button" id="b47" value="47" class="b">
+              <input type="button" id="b48" value="48" class="b">
+              <input type="button" id="b49" value="49" class="b">
+              <input type="button" id="b50" value="50" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b40" value="40" class="b">
+              <input type="button" id="b39" value="39" class="b">
+              <input type="button" id="b38" value="38" class="b">
+              <input type="button" id="b37" value="37" class="b">
+              <input type="button" id="b36" value="36" class="b">
+              <input type="button" id="b35" value="35" class="b">
+              <input type="button" id="b34" value="34" class="b">
+              <input type="button" id="b33" value="33" class="b">
+              <input type="button" id="b32" value="32" class="b">
+              <input type="button" id="b31" value="31" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b21" value="21" class="b">
+              <input type="button" id="b22" value="22" class="b">
+              <input type="button" id="b23" value="23" class="b">
+              <input type="button" id="b24" value="24" class="b">
+              <input type="button" id="b25" value="25" class="b">
+              <input type="button" id="b26" value="26" class="b">
+              <input type="button" id="b27" value="27" class="b">
+              <input type="button" id="b28" value="28" class="b">
+              <input type="button" id="b29" value="29" class="b">
+              <input type="button" id="b30" value="30" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b20" value="20" class="b">
+              <input type="button" id="b19" value="19" class="b">
+              <input type="button" id="b18" value="18" class="b">
+              <input type="button" id="b17" value="17" class="b">
+              <input type="button" id="b16" value="16" class="b">
+              <input type="button" id="b15" value="15" class="b">
+              <input type="button" id="b14" value="14" class="b">
+              <input type="button" id="b13" value="13" class="b">
+              <input type="button" id="b12" value="12" class="b">
+              <input type="button" id="b11" value="11" class="b">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="button" id="b1" value="1" class="b">
+              <input type="button" id="b2" value="2" class="b">
+              <input type="button" id="b3" value="3" class="b">
+              <input type="button" id="b4" value="4" class="b">
+              <input type="button" id="b5" value="5" class="b">
+              <input type="button" id="b6" value="6" class="b">
+              <input type="button" id="b7" value="7" class="b">
+              <input type="button" id="b8" value="8" class="b">
+              <input type="button" id="b9" value="9" class="b">
+              <input type="button" id="b10" value="10" class="b">
+            </td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <input type="button" value="P1" onclick="diceNumber1(); changeColor1();" id="p1">
+        <input type="button" value="P2" onclick="diceNumber2(); changecolor2();" id="p2">
+        <input type="button" value="RESET" class="b" onclick="Reset();">
+        
+        <div>
+          P1 <span id="spanp1"></span> P2 <span id="spanp2"></span>
+  
+        </div>
+  
+      </form>
+  </div>
+
+</body>
+
+</html>

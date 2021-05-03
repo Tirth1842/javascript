@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="time();">
+    <script>
+        setInterval("time();",1000);
+        const time=()=>{
+            var d = new Date();
+
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+
+        if(h>=13 && h<24)
+        {
+            document.getElementById("times").value = (h-12) + " :"+m +" : "+s+" PM ";
+            
+        }
+        else if(h==12)
+        {
+            document.getElementById("times").value = (h) + " :"+m +" : "+s+" PM ";
+        }
+        else
+        {
+            document.getElementById("times").value = (h) + " :"+m +" : "+s+" AM ";
+           
+        }
+        
+        
+    }  
+
+    const greetings=()=>{
+        var d = new Date();
+
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+
+        if(h>=12 && h<24)
+        {
+            
+            if(h<=18)
+            {
+                alert("good afternoon");
+            }
+            else{
+                alert("good night");
+            }
+        }
+        else
+        {
+            
+            if(h>=5 && h<12)
+            {
+                alert("good morning");
+            }
+            else{
+                alert("good night");
+            }
+        }
+    }
+    </script>
+    <form>
+        <input type="text" id = "times"/> 
+        <input type="button" value="greetings" onclick="greetings();"/>   
+    </form>
+</body>
+</html>
